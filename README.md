@@ -1,4 +1,4 @@
-# `type-info`
+# `go-type-info`
 _A library for discovering type information in Go_
 
 ## Why
