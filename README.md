@@ -13,6 +13,10 @@ import oi "github.com/nicklarsennz/go-type-info"
 func main() {
     // Given a struct `S`
     s_fields, err := oi.StructFields(&S{})
+
+    num_fields := len(s_fields)
+    zeroth_field_name := s_fields[0].Name
+    zeroth_field_type := s_fields[0].Type
 }
 ```
 
