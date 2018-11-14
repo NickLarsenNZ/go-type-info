@@ -3,7 +3,7 @@ package type_info_test
 import "testing"
 import (
 	"reflect"
-	info "github.com/nicklarsennz/go-type-info"
+	"go-type-info" // Todo: Not sure how to make this not bind to my local directory name. If I add the full github URL, then my coverage shows as 0% with tests passing anyway.
 )
 
 type customType interface {}
@@ -17,10 +17,10 @@ type S struct {
 }
 
 func TestFields(t *testing.T) {
-	result := info.StructFields(&S{})
+	result := type_info.StructFields(&S{})
 
-	expected := &info.Structure{
-		Fields: []info.NameType{
+	expected := &type_info.Structure{
+		Fields: []type_info.NameType{
 			{
 				Name: "F1",
 				Type: "string",
