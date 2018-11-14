@@ -1,4 +1,4 @@
-package object_info
+package type_info
 
 import (
 	"reflect"

@@ -1,9 +1,9 @@
-package object_info_test
+package type_info_test
 
 import "testing"
 import (
-	oi "object-info"
 	"reflect"
+	info "github.com/nicklarsennz/go-type-info"
 )
 
 type customType interface {}
@@ -17,10 +17,10 @@ type S struct {
 }
 
 func TestFields(t *testing.T) {
-	result := oi.StructFields(&S{})
+	result := info.StructFields(&S{})
 
-	expected := &oi.Structure{
-		Fields: []oi.NameType{
+	expected := &info.Structure{
+		Fields: []info.NameType{
 			{
 				Name: "F1",
 				Type: "string",
@@ -39,7 +39,7 @@ func TestFields(t *testing.T) {
 			},
 			{
 				Name: "f5",
-				Type: "object_info_test.customType",
+				Type: "type_info_test.customType",
 			},
 		},
 	}

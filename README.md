@@ -8,11 +8,11 @@ I wanted a small library with simple access to the commonly used parts of the Go
 ```go
 package main
 
-import oi "github.com/nicklarsennz/go-type-info"
+import info "github.com/nicklarsennz/go-type-info"
 
 func main() {
     // Given a struct `S`
-    s_fields, err := oi.StructFields(&S{})
+    s_fields, err := info.StructFields(&S{})
 
     num_fields := len(s_fields)
     zeroth_field_name := s_fields[0].Name
